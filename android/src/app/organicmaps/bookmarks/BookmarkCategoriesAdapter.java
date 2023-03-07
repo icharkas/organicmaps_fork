@@ -154,8 +154,26 @@ public class BookmarkCategoriesAdapter extends BaseBookmarkCategoryAdapter<Recyc
   private void bindSize(@NonNull CategoryViewHolder categoryHolder,
                         @NonNull BookmarkCategory category)
   {
-    BookmarkCategory.CountAndPlurals template = category.getPluralsCountTemplate();
-    categoryHolder.setSize(template.getPlurals(), template.getCount());
+    if (category.size() == 0)
+    {
+      categoryHolder.setSize(R.plurals.objects, 0);
+      return;
+    }
+
+    if (category.getBookmarksCount() == 0)
+    {
+      categoryHolder.setSize(R.plurals.tracks, category.getTracksCount());
+      return;
+    }
+
+    if (category.getTracksCount() == 0)
+    {
+      categoryHolder.setSize(R.plurals.places, category.getBookmarksCount());
+      return;
+    }
+
+    categoryHolder.setDetailedSize(category.getTracksCount(), category.getBookmarksCount());
+
   }
 
   @Override

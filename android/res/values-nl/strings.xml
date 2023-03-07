@@ -590,7 +590,7 @@
 	  <item quantity="other">%d plaatsen</item>
 	</plurals>
 	<plurals name="tracks">
-	  <item quantity="other">%d routes</item>
+	  <item quantity="other">%d tracks</item>
 	</plurals>
 	<!-- used to choose between the Google and Android location services -->
 	<string name="subtittle_opt_out">Tracking-instellingen</string>

@@ -1,5 +1,6 @@
 package app.organicmaps.bookmarks;
 
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.text.Html;
@@ -273,6 +274,15 @@ public class Holders
     void setSize(@PluralsRes int phrase, int size)
     {
       mSize.setText(mSize.getResources().getQuantityString(phrase, size, size));
+    }
+
+    void setDetailedSize(int tracks, int bookmarks)
+    {
+      final Resources resources = mSize.getResources();
+      final String tracksSize = resources.getQuantityString(R.plurals.tracks, tracks, tracks);
+      final String bookmarksSize = resources.getQuantityString(R.plurals.places, bookmarks,
+              bookmarks);
+      mSize.setText(resources.getString(R.string.comma_separated_pair, tracksSize, bookmarksSize));
     }
 
     void setCategory(@NonNull BookmarkCategory entity)

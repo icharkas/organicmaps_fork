@@ -1990,4 +1990,5 @@
 	<string name="type.piste_type.sled">Sledding Piste</string>
 	<string name="type.building_part">Building</string>
 	<string name="type.amenity.events_venue">Events Venue</string>
+	<string name="comma_separated_pair">%1$s, %2$s</string>
 </resources>
