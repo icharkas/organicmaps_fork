@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Bokmärkessamlingens namn</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Bokmärken</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Bokmärken och rutter</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Mina Platser</string>
 	<!-- Add bookmark dialog - bookmark name -->

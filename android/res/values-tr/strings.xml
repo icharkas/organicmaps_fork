@@ -75,6 +75,8 @@
 	<string name="bookmark_set_name">Yer İmi Listesi Adı</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Yer İmleri</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Yer İmleri ve kayıtlar</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Yerlerim</string>
 	<!-- Add bookmark dialog - bookmark name -->

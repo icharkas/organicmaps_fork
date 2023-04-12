@@ -74,6 +74,9 @@
 /* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
 "bookmarks" = "Yer İmleri";
 
+/* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
+"bookmarks_and_tracks" = "Yer İmleri ve kayıtlar";
+
 /* Default bookmark list name */
 "core_my_places" = "Yerlerim";
 

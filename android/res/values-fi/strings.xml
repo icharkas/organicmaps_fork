@@ -75,6 +75,8 @@
 	<string name="bookmark_set_name">Kirjanmerkkivalikoiman nimi</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Kirjanmerkit</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Kirjanmerkit ja reitit</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Paikkani</string>
 	<!-- Add bookmark dialog - bookmark name -->

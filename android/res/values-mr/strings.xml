@@ -65,6 +65,8 @@
 	<string name="bookmark_set_name">खूणपत्र यादीचे नाव</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">खूणपत्रे</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">खूणपत्रे आणि ट्रॅक</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">माझी ठिकाणे</string>
 	<!-- Add bookmark dialog - bookmark name -->

@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Denumirea listei</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Locuri preferate</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Locuri preferate și trasee</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Locurile mele</string>
 	<!-- Add bookmark dialog - bookmark name -->

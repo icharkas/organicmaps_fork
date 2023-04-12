@@ -75,6 +75,8 @@
 	<string name="bookmark_set_name">Nama Set Penanda</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Penanda</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Penanda dan jalur</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Tempat-tempat Saya</string>
 	<!-- Add bookmark dialog - bookmark name -->

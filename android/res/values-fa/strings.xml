@@ -72,6 +72,8 @@
 	<string name="bookmark_color">رنگ نشانه</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">نشانه‌ها</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">نشانه‌ها و مسیر</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">مکان من</string>
 	<!-- Add bookmark dialog - bookmark name -->

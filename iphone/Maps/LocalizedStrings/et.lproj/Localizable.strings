@@ -74,6 +74,9 @@
 /* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
 "bookmarks" = "Järjehoidjad";
 
+/* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
+"bookmarks_and_tracks" = "Järjehoidjad ja rajad";
+
 /* Default bookmark list name */
 "core_my_places" = "Minu kohad";
 

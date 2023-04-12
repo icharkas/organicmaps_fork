@@ -74,6 +74,9 @@
 /* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
 "bookmarks" = "Αγαπημένα";
 
+/* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
+"bookmarks_and_tracks" = "Αγαπημένα και διαδρομές";
+
 /* Default bookmark list name */
 "core_my_places" = "Οι τοποθεσίες μου";
 

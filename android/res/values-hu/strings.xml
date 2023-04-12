@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Könyvjelzőcsoport neve</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Könyvjelzők</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Könyvjelzők és csoportok</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Saját helyeim</string>
 	<!-- Add bookmark dialog - bookmark name -->

@@ -74,6 +74,8 @@
 	<string name="bookmark_set_name">Όνομα συνόλου αγαπημένων</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Αγαπημένα</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Αγαπημένα και διαδρομές</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Οι τοποθεσίες μου</string>
 	<!-- Add bookmark dialog - bookmark name -->

@@ -65,6 +65,8 @@
 	<string name="bookmark_set_name">Nom de la llista de marcadors</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Marcadors</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Marcadors i traces</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Els meus llocs</string>
 	<!-- Add bookmark dialog - bookmark name -->

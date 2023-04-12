@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Název záložky</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Záložky</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Záložky a stopy</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Moje místa</string>
 	<!-- Add bookmark dialog - bookmark name -->

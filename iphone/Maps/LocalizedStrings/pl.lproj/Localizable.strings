@@ -74,6 +74,9 @@
 /* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
 "bookmarks" = "Zakładki";
 
+/* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
+"bookmarks_and_tracks" = "Zakładki i trasy";
+
 /* Default bookmark list name */
 "core_my_places" = "Moje miejsca";
 

@@ -69,6 +69,8 @@
 	<string name="bookmark_set_name">שם רשימת האתרים</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">רשימות אתרים</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">רשימות אתרים ונתיבים</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">המקומות שלי</string>
 	<!-- Add bookmark dialog - bookmark name -->

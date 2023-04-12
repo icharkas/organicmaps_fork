@@ -75,6 +75,8 @@
 	<string name="bookmark_set_name">Bokmerk settnavn</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Bokmerker</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Bokmerker og ruter</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Mine steder</string>
 	<!-- Add bookmark dialog - bookmark name -->

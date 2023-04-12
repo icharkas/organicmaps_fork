@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Nome dell\'elenco</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Luoghi preferiti</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Luoghi preferiti e percorsi</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">I miei luoghi</string>
 	<!-- Add bookmark dialog - bookmark name -->

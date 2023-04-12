@@ -74,6 +74,9 @@
 /* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
 "bookmarks" = "Kirjanmerkit";
 
+/* "Bookmarks" dialog title, please also edit it in iphone/plist.txt */
+"bookmarks_and_tracks" = "Kirjanmerkit ja reitit";
+
 /* Default bookmark list name */
 "core_my_places" = "Paikkani";
 

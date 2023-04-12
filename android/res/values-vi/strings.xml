@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Đánh dấu Tên Bộ</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Đánh dấu</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Đánh dấu và dấu vết</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Các Địa chỉ của Tôi</string>
 	<!-- Add bookmark dialog - bookmark name -->

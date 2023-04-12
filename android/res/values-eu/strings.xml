@@ -65,6 +65,8 @@
 	<string name="bookmark_set_name">Markatzaile taldearen izena</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Markagailuak</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Markagailuak eta ibilbideak</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Nire tokiak</string>
 	<!-- Add bookmark dialog - bookmark name -->

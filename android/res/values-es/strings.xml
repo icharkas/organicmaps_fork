@@ -73,6 +73,8 @@
 	<string name="bookmark_set_name">Nombre del grupo de marcadores</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Marcadores</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Marcadores y rutas</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Mis lugares</string>
 	<!-- Add bookmark dialog - bookmark name -->

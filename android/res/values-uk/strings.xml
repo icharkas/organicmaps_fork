@@ -76,6 +76,8 @@
 	<string name="bookmark_set_name">Назва списка мiток</string>
 	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
 	<string name="bookmarks">Мітки</string>
+	<!-- "Bookmarks" dialog title, please also edit it in iphone/plist.txt -->
+	<string name="bookmarks_and_tracks">Мітки та маршрути</string>
 	<!-- Default bookmark list name -->
 	<string name="core_my_places">Мої Мітки</string>
 	<!-- Add bookmark dialog - bookmark name -->
