@@ -62,12 +62,12 @@ void MapWidget::BindHotkeys(QWidget & parent)
       {Qt::Key_Equal, SLOT(ScalePlus())},
       {Qt::Key_Plus, SLOT(ScalePlus())},
       {Qt::Key_Minus, SLOT(ScaleMinus())},
-      {Qt::ALT + Qt::Key_Equal, SLOT(ScalePlusLight())},
-      {Qt::ALT + Qt::Key_Plus, SLOT(ScalePlusLight())},
-      {Qt::ALT + Qt::Key_Minus, SLOT(ScaleMinusLight())},
+      {static_cast<int>(Qt::ALT) + static_cast<int>(Qt::Key_Equal), SLOT(ScalePlusLight())},
+      {static_cast<int>(Qt::ALT) + static_cast<int>(Qt::Key_Plus), SLOT(ScalePlusLight())},
+      {static_cast<int>(Qt::ALT) + static_cast<int>(Qt::Key_Minus), SLOT(ScaleMinusLight())},
 #ifdef ENABLE_AA_SWITCH
-      {Qt::ALT + Qt::Key_A, SLOT(AntialiasingOn())},
-      {Qt::ALT + Qt::Key_S, SLOT(AntialiasingOff())},
+      {static_cast<int>(Qt::ALT) + static_cast<int>(Qt::Key_A), SLOT(AntialiasingOn())},
+      {static_cast<int>(Qt::ALT) + static_cast<int>(Qt::Key_S), SLOT(AntialiasingOff())},
 #endif
   };
 
@@ -377,20 +377,22 @@ void MapWidget::initializeGL()
       // TODO: Separate apiOpenGL3 from apiOpenGLES3, and use that for the currend shader code.
       m_apiOpenGLES3 = true;
     }
+
+    auto fmt = context()->format();
+    if (m_apiOpenGLES3)
+    {
+      fmt.setProfile(QSurfaceFormat::CoreProfile);
+      fmt.setVersion(3, 2);
+    }
+    else
+    {
+      fmt.setProfile(QSurfaceFormat::CompatibilityProfile);
+      fmt.setVersion(2, 1);
+    }
+
+    QSurfaceFormat::setDefaultFormat(fmt);
   }
 #endif
-  auto fmt = context()->format();
-  if (m_apiOpenGLES3)
-  {
-    fmt.setProfile(QSurfaceFormat::CoreProfile);
-    fmt.setVersion(3, 2);
-  }
-  else
-  {
-    fmt.setProfile(QSurfaceFormat::CompatibilityProfile);
-    fmt.setVersion(2, 1);
-  }
-  QSurfaceFormat::setDefaultFormat(fmt);
 
   m_contextFactory.reset(new QtOGLContextFactory(context()));
 

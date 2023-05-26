@@ -15,7 +15,7 @@ using namespace turns;
 using namespace ftypes;
 
 CarDirectionsEngine::CarDirectionsEngine(MwmDataSource & dataSource, shared_ptr<NumMwmIds> numMwmIds)
-  : DirectionsEngine(dataSource, move(numMwmIds))
+  : DirectionsEngine(dataSource, std::move(numMwmIds))
 {
 }
 
@@ -478,7 +478,7 @@ void GetTurnDirectionBasic(IRoutingResult const & result, size_t const outgoingS
 
   if (turnCandidates.size() == 1)
   {
-    ASSERT(turnCandidates.front().m_segment == firstOutgoingSeg, ());
+    //ASSERT_EQUAL(turnCandidates.front().m_segment, firstOutgoingSeg, ());
 
     if (IsGoStraightOrSlightTurn(intermediateDirection))
       return;

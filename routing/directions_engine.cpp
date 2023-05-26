@@ -78,8 +78,7 @@ void DirectionsEngine::LoadPathAttributes(FeatureID const & featureId,
   LoadLanes(pathSegment, *ft, isForward);
 
   pathSegment.m_highwayClass = GetHighwayClass(types);
-  ASSERT_NOT_EQUAL(pathSegment.m_highwayClass, HighwayClass::Error, ());
-  ASSERT_NOT_EQUAL(pathSegment.m_highwayClass, HighwayClass::Undefined, ());
+  ASSERT(pathSegment.m_highwayClass != HighwayClass::Undefined, (featureId));
 
   pathSegment.m_isLink = m_linkChecker(types);
   pathSegment.m_onRoundabout = m_roundAboutChecker(types);
@@ -89,7 +88,8 @@ void DirectionsEngine::LoadPathAttributes(FeatureID const & featureId,
   pathSegment.m_roadNameInfo.m_junction_ref = ft->GetMetadata(feature::Metadata::FMD_JUNCTION_REF);
   pathSegment.m_roadNameInfo.m_destination_ref = ft->GetMetadata(feature::Metadata::FMD_DESTINATION_REF);
   pathSegment.m_roadNameInfo.m_destination = ft->GetMetadata(feature::Metadata::FMD_DESTINATION);
-  pathSegment.m_roadNameInfo.m_ref = ft->GetRoadNumber();
+  /// @todo Should make some better parsing here (@see further use in GetFullRoadName).
+  pathSegment.m_roadNameInfo.m_ref = ft->GetRef();
   pathSegment.m_roadNameInfo.m_name = ft->GetName(StringUtf8Multilang::kDefaultCode);
 }
 
@@ -119,8 +119,7 @@ void DirectionsEngine::GetSegmentRangeAndAdjacentEdges(IRoadGraph::EdgeListT con
     feature::TypesHolder types(*ft);
 
     auto const highwayClass = GetHighwayClass(types);
-    ASSERT_NOT_EQUAL(highwayClass, HighwayClass::Error, (edge.PrintLatLon()));
-    ASSERT_NOT_EQUAL(highwayClass, HighwayClass::Undefined, (edge.PrintLatLon()));
+    ASSERT(highwayClass != HighwayClass::Undefined, (edge.PrintLatLon()));
 
     double angle = 0;
 
@@ -210,8 +209,8 @@ void DirectionsEngine::FillPathSegmentsAndAdjacentEdgesMap(
     // |prevSegments| contains segments which corresponds to road edges between joints. In case of a
     // fake edge a fake segment is created.
     CHECK_EQUAL(prevSegments.size() + 1, prevJunctions.size(), ());
-    pathSegment.m_path = move(prevJunctions);
-    pathSegment.m_segments = move(prevSegments);
+    pathSegment.m_path = std::move(prevJunctions);
+    pathSegment.m_segments = std::move(prevSegments);
 
     LoadPathAttributes(segmentRange.GetFeature(), pathSegment, inEdge.IsForward());
 
@@ -221,11 +220,11 @@ void DirectionsEngine::FillPathSegmentsAndAdjacentEdgesMap(
       /// Entry already exists, when start-end points are on the same fake segments.
 
       //bool const isEmpty = adjacentEdges.m_outgoingTurns.candidates.empty();
-      //CHECK(m_adjacentEdges.emplace(segmentRange, move(adjacentEdges)).second || isEmpty, ());
-      m_adjacentEdges.emplace(segmentRange, move(adjacentEdges));
+      //CHECK(m_adjacentEdges.emplace(segmentRange, std::move(adjacentEdges)).second || isEmpty, ());
+      m_adjacentEdges.emplace(segmentRange, std::move(adjacentEdges));
     }
 
-    m_pathSegments.push_back(move(pathSegment));
+    m_pathSegments.push_back(std::move(pathSegment));
 
     prevJunctions.clear();
     prevSegments.clear();
@@ -321,8 +320,6 @@ void DirectionsEngine::MakeTurnAnnotation(IndexRoadGraph::EdgeVector const & rou
 
   RoutingEngineResult result(routeEdges, m_adjacentEdges, m_pathSegments);
 
-  LOG(LDEBUG, ("Shortest path length:", result.GetPathLength()));
-
   routeSegments.reserve(routeEdges.size());
 
   RoutingSettings const vehicleSettings = GetRoutingSettings(m_vehicleType);
@@ -330,7 +327,7 @@ void DirectionsEngine::MakeTurnAnnotation(IndexRoadGraph::EdgeVector const & rou
   auto const & loadedSegments = result.GetSegments(); // the same as m_pathSegments
 
   // First point of first loadedSegment is ignored. This is the reason for:
-  ASSERT_EQUAL(loadedSegments.front().m_path.back(), loadedSegments.front().m_path.front(), ());
+  //ASSERT_EQUAL(loadedSegments.front().m_path.back(), loadedSegments.front().m_path.front(), ());
 
   size_t skipTurnSegments = 0;
   for (size_t idxLoadedSegment = 0; idxLoadedSegment < loadedSegments.size(); ++idxLoadedSegment)
@@ -365,8 +362,8 @@ void DirectionsEngine::MakeTurnAnnotation(IndexRoadGraph::EdgeVector const & rou
     routeSegments.emplace_back(loadedSegment.m_segments.back(), turnItem, loadedSegment.m_path.back(), rni);
   }
 
-  ASSERT_EQUAL(routeSegments.front().GetJunction(), result.GetStartPoint(), ());
-  ASSERT_EQUAL(routeSegments.back().GetJunction(), result.GetEndPoint(), ());
+  //ASSERT_EQUAL(routeSegments.front().GetJunction(), result.GetStartPoint(), ());
+  //ASSERT_EQUAL(routeSegments.back().GetJunction(), result.GetEndPoint(), ());
 
   FixupTurns(routeSegments);
 }

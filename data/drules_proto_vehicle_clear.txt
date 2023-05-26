@@ -1628,7 +1628,7 @@ cont {
   element {
     scale: 17
     symbol {
-      name: "mail-m"
+      name: "parcel_locker-m"
       priority: 16000
       min_distance: 20
     }
@@ -1645,7 +1645,7 @@ cont {
   element {
     scale: 18
     symbol {
-      name: "mail-m"
+      name: "parcel_locker-m"
       priority: 16000
       min_distance: 20
     }
@@ -1662,7 +1662,7 @@ cont {
   element {
     scale: 19
     symbol {
-      name: "mail-m"
+      name: "parcel_locker-m"
       priority: 16000
       min_distance: 20
     }
@@ -73880,6 +73880,14 @@ colors {
   value {
     name: "RouteFakeOutline"
     color: 7434609
+  }
+  value {
+    name: "RouteFirstSegmentArrowsMaskBicycle"
+    color: 4288423856
+  }
+  value {
+    name: "RouteFirstSegmentArrowsMaskCar"
+    color: 4278401920
   }
   value {
     name: "RouteMarkPrimaryText"
